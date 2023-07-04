@@ -168,10 +168,9 @@ p {
 }
 
 .resume-body {
-    margin: 0 20%;
+    margin: 0 15%;
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: left;
     position: relative;
 }
@@ -185,7 +184,8 @@ p {
 }
 
 .photo-container {
-    margin-left: 42%;
+    margin-left: auto;
+    margin-right: auto;
     width: 100px; 
     height: 100px; 
 }
@@ -269,7 +269,6 @@ p {
 
 .course-form {
 	background-color: #f7f7ea;
-	width:  1200;
 	height: 100px;
 	border-radius: 5px;
 	display: flex;
