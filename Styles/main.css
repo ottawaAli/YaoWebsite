@@ -132,8 +132,9 @@ body {
 
 }
 
-.left-align {
-    text-align: left;
+
+.college-name {
+  margin-left: 40px; /* 设置左边距的数值，可以根据您的需要进行调整 */
 }
 
 .right-align {
