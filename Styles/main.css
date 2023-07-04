@@ -47,7 +47,7 @@ a:hover {
 /* Style the index */
 .index-container > div {
     width: 100%;
-    max-width: 1000px; 
+    max-width: 1300px; 
 }
 
 .index-container {
@@ -56,12 +56,6 @@ a:hover {
     margin: 0 auto;
 }
 
-.index-left-section,
-.index-right-section {
-    width: 50%;
-	max-width: 400px; 
-	margin: 0 auto;
-}
 
 .index-left-section {
     display: flex;
@@ -134,7 +128,7 @@ body {
 
 
 .college-name {
-  margin-left: 40px; /* 设置左边距的数值，可以根据您的需要进行调整 */
+  margin-left: 40px; /* Set the left margin of the college names*/
 }
 
 .right-align {
@@ -198,7 +192,8 @@ p {
     width: 100px; 
     height: 100px; 
 }
-  
+
+/* Style the picture of resume page in the middle  */  
 .circle-photo {
     width: 100%; 
     height: 100%; 
@@ -268,6 +263,14 @@ p {
 	align-items: center;
 	gap: 5px;
 }
+
+.lab-image {
+		text-align: center;
+	}
+
+.lab-image img {
+		max-width: 50%;
+	}
 
 .search-bar {
 	font-size: 15px;
