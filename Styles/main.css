@@ -44,21 +44,37 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style the index */
+/* Style the index page*/
 .index-container > div {
     width: 100%;
-    max-width: 1300px; 
 }
 
 .index-container {
 	display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0 auto;
 }
 
-
-.index-left-section {
+/*Set the middle section occupy 50%*/
+.index-middle-section {
+    flex: 2;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Set the left section occupy 25%*/
+.index-left-section {
+    flex: 1;
+	display: flex;
+    flex-direction: column;
+}
+
+/*Set the right section occupy 25%*/
+.index-right-section {
+    flex: 1;
+	display: flex;
     flex-direction: column;
 }
 
@@ -77,13 +93,6 @@ a:hover {
   height: 400px;
 }
 
-.index-middle-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 /* Style the picture of index */
 .center-img {
     display: flex;
@@ -100,20 +109,9 @@ a:hover {
     max-height: 100%;
 }
 
-/* Style the right section */
-.index-right-section {
-    float: right;
-    display: flex; 
-	flex-direction: column; 
-	justify-content: center;
-	align-items: center; 
-}
-
 .index-right-section p {
     margin-bottom: 20px;
 }
-
-
 
 body {
     min-height: 100%;
@@ -126,9 +124,9 @@ body {
 
 }
 
-
+/* Set the left margin of the college names*/
 .college-name {
-  margin-left: 40px; /* Set the left margin of the college names*/
+  margin-left: 40px; 
 }
 
 .right-align {
@@ -240,6 +238,30 @@ p {
     margin-bottom: 10px;
 }
 
+.Googlelogo {
+  width: 60px;
+  height: 20px;
+}
+
+.HRBlogo {
+  width: 110px;
+  height: 20px;
+}
+
+.CAlogo {
+  width: 30px;
+  height: 20px;
+}
+
+.Shilogo {
+  width: 20px;
+  height: 20px;
+}
+
+.Alilogo {
+  width: 150px;
+  height: 30px;
+}
 .courses-container {
     max-width: 100%;
     margin: 0 auto;
