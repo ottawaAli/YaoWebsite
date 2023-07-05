@@ -1,6 +1,6 @@
 /*
 Name: Yao Huang
-Date: June 25 2023
+Date: July 4 2023
 Section: 23S_CST7285_300
 This is the CSS file of Assignment 1.
 */
@@ -51,13 +51,13 @@ a:hover {
 
 .index-container {
 	display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Position the flex items at the beginning of the container */
     margin: 0 auto;
 }
 
 /*Set the middle section occupy 50%*/
 .index-middle-section {
-    flex: 2;
+    flex: 2; /* Take up twice the amount of space compared to the other flex items*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +66,7 @@ a:hover {
 
 /*Set the left section occupy 25%*/
 .index-left-section {
-    flex: 1;
+    flex: 1; /* Take up an equal amount of space within the container as each other*/
 	display: flex;
     flex-direction: column;
 	justify-content: center;
@@ -74,7 +74,7 @@ a:hover {
 
 /*Set the right section occupy 25%*/
 .index-right-section {
-    flex: 1;
+    flex: 1; /* Take up an equal amount of space within the container as each other*/
 	display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,11 +95,10 @@ a:hover {
   height: 400px;
 }
 
-/* Style the picture of index */
+/* Style the picture in the left section of the index page*/
 .center-img {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 200px;
     height: 100%;
     margin: 0 auto;
@@ -111,7 +110,7 @@ a:hover {
     max-height: 100%;
 }
 
-
+/* Style the body of the index page*/
 body {
     min-height: 100%;
     padding: 0;
@@ -133,7 +132,7 @@ body {
 }
 
 .body-list {
-	list-style-type: circle;
+	list-style-type: circle; /*Display a small circle as the marker before each list item.*/
 }
 
 h1 {
@@ -167,8 +166,9 @@ p {
     text-decoration: none;
 }
 
+/* Set the style of the resume page */
 .resume-body {
-    margin: 0 15%;
+    margin: 0 15%; /* Set the margin*/
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -190,7 +190,7 @@ p {
     height: 100px; 
 }
 
-/* Style the picture of resume page in the middle  */  
+/* Style the picture of the resume page in the middle  */  
 .circle-photo {
     width: 100%; 
     height: 100%; 
@@ -231,12 +231,24 @@ p {
     background-color: #5fbdd0;
 }
 
+/* Style the image of the Lab to the middle*/
+.lab-image {
+		text-align: center;
+	}
+
+.lab-image img {
+		max-width: 50%;
+	}
+
+
+/* Style the date to the right*/
 .with-date {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Evenly distributes the child elements along the main axis*/
     margin-bottom: 10px;
 }
 
+/* Style the logos*/
 .Googlelogo {
   width: 60px;
   height: 20px;
@@ -261,54 +273,52 @@ p {
   width: 150px;
   height: 30px;
 }
-.courses-container {
+
+/* Style the courses container*/
+.course-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .course-form {
 	background-color: #f7f7ea;
-	height: 100px;
 	border-radius: 5px;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 50px;
+	justify-content: center; /* Distribute the child elements in the center */
+    align-items: center; /* Center the content vertically */
+    padding: 0 30px; /* Add horizontal spacing between the child elements */
+}
+
+.course-form input,
+.course-form select,
+.course-form button {
+    margin-right: 20px; /* Add horizontal spacing between the form elements */
 }
 
 .course-form > div {
 	display: flex;
 	align-items: center;
-	gap: 5px;
+	flex: 1; /* Take up an equal amount of space within the container*/
 }
 
-.lab-image {
-		text-align: center;
-	}
-
-.lab-image img {
-		max-width: 50%;
-	}
-
-.search-bar {
-	font-size: 15px;
-	padding: 10px;
-	width: 300px;
+.input-field {
+	font-size: 20px;
+	width: 350px;
 }
 
-.search-bar::placeholder {
+.input-field::placeholder {
+  font-size: 20px;
+}
+
+.course-filter {
   font-size: 15px;
-}
-
-.course-select {
-  font-size: 18px;
   padding: 6px 10px;
 }
 
 .course-button {
-  font-size: 18px;
+   background-color: #fbf8e7;
+   font-size: 15px;
   padding: 8px 12px;
 }
 
@@ -318,15 +328,20 @@ p {
 	grid-gap: 20px;
 }
 
-.course-card {
+.course-block {
 	border: 1px solid #e0ebf5;
 	padding: 10px;
 	text-align: center;
 }
 
-.course-card img {
+.course-block img {
 	width: 200px;
 	height: 250px;
+}
+
+/*Set the font size of the course description*/
+.small-description {
+    font-size: 13px; /* Set the font size to your desired smaller size */
 }
 
 /*style for footer---begin*/

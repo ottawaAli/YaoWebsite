@@ -21,38 +21,37 @@
     </header>
 
     <!--body-->
-    <main>
-        <div class="courses-container">
-            <form class="course-form" onsubmit="event.preventDefault(); filterCourses(event);">
-				<div>
-					<input class="search-bar" type="text" placeholder="Input course name" id="query" name="query">
-				</div>
-				
-				<div>
-					<label for="filter-level">Filter by Level: </label>
-					<select class="course-select" id="filter-level" name="filter-level" onchange="filterCourses(event)">
-					  <option>All</option>
-					  <option>Level 1</option>
-					  <option>Level 2</option>
-					  <option>Level 3</option>
-					</select>
-				</div>
-			  
-				<div>
-					  <label for="sort-level">Sort by Level: </label>
-					  <select class="course-select" id="sort-level" name="sort-level" onchange="filterCourses(event)">
-						<option>Lowest to Highest</option>
-						<option>Highest to Lowest</option>
-					  </select>
-				</div>
-				
-				<button class="course-button" type="submit">Search</button>
-			</form>
-             
-			<div class="course-list" id="course-list">
-			</div>
-		</div>
-    </main>
+<main>
+    <div class="course-container">
+        <!-- calls the "selectCourse" function when the form is submitted-->		
+        <form class="course-form" onsubmit="selectCourse(event);">
+            <!-- Course name search -->
+            <input class="input-field" type="text" placeholder="Type course name and press Enter" id="search-course" name="search-course">
+            
+            <!-- Dropdown select for filtering by level -->
+            <label for="filter-level">Filter by Level: </label>
+            <select class="course-filter" id="filter-level" name="filter-level" onchange="selectCourse(event)">
+			<option value="All">All</option>
+			<option value="1">Level 1</option>
+			<option value="2">Level 2</option>
+			<option value="3">Level 3</option>
+            </select>
+          
+            <!-- Dropdown select for sorting by Level -->
+            <label for="sort-level">Sort by Level: </label>
+            <select class="course-filter" id="sort-level" name="sort-level" onchange="selectCourse(event)">
+                <option>Lowest to Highest</option>
+                <option>Highest to Lowest</option>
+            </select>
+            
+            <button class="course-button" type="submit">Search</button>
+        </form>
+         
+        <!-- Course list -->
+        <div class="course-list" id="course-list"></div>
+    </div>
+</main>
+
 
     <!--footer-->
     <footer>
