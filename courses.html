@@ -25,11 +25,14 @@
     <div class="course-container">
         <!-- calls the "selectCourse" function when the form is submitted-->		
         <form class="course-form" onsubmit="selectCourse(event);">
-            <!-- Course name search -->
-            <input class="input-field" type="text" placeholder="Type course name and press Enter" id="search-course" name="search-course">
-            
+
+			<!-- Course name search -->
+            <label for="input-field">Course name: </label>
+			<input class="input-field" type="text" placeholder="Type and press Enter or Search" id="search-course" name="search-course">
+            <button class="course-button" type="submit">Search</button>
+	
             <!-- Dropdown select for filtering by level -->
-            <label for="filter-level">Filter by Level: </label>
+            <label for="filter-level">Level: </label>
             <select class="course-filter" id="filter-level" name="filter-level" onchange="selectCourse(event)">
 			<option value="All">All</option>
 			<option value="1">Level 1</option>
@@ -43,12 +46,12 @@
                 <option>Lowest to Highest</option>
                 <option>Highest to Lowest</option>
             </select>
-            
-            <button class="course-button" type="submit">Search</button>
         </form>
          
         <!-- Course list -->
         <div class="course-list" id="course-list"></div>
+		<!-- Course blocks will be dynamically generated here -->
+
     </div>
 </main>
 

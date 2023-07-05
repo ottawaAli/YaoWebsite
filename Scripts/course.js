@@ -46,11 +46,15 @@ function selectCourse(event) {
 	// Generate HTML markup for each course block
 	let courseBlockHTML = filteredCourses.map(course => `
     <div class="course-block">
-        <img src="Images/${course.image}" alt="${course.name}">
-        <h2>${course.name}</h2>
-        <p>Level ${course.level}</p>
-        <p>Code: ${course.code}</p>
-        <p class="small-description">Description: ${course.description}</p>
+        <div class="course-image">
+            <img src="Images/${course.image}" alt="${course.name}">
+        </div>
+        <div class="course-details">
+            <h2>${course.name}</h2>
+            <p>Level ${course.level}</p>
+            <p>Code: ${course.code}</p>
+            <p class="small-description">Description: ${course.description}</p>
+        </div>
     </div>
 	`).join('');
 
