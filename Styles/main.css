@@ -1,6 +1,6 @@
 /*
 Name: Yao Huang
-Date: July 4 2023
+Date: June 25 2023
 Section: 23S_CST7285_300
 This is the CSS file of Assignment 1.
 */
@@ -44,55 +44,57 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style the index page*/
+/* Style the index */
 .index-container > div {
     width: 100%;
+    max-width: 1000px; 
 }
 
 .index-container {
 	display: flex;
-    justify-content: flex-start; /* Position the flex items at the beginning of the container */
+    justify-content: space-between;
     margin: 0 auto;
 }
 
-/*Set the middle section occupy 50%*/
-.index-middle-section {
-    flex: 2; /* Take up twice the amount of space compared to the other flex items*/
+.index-left-section,
+.index-right-section {
+    width: 50%;
+	max-width: 400px; 
+	margin: 0 auto;
+}
+
+.index-left-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-/*Set the left section occupy 25%*/
-.index-left-section {
-    flex: 1; /* Take up an equal amount of space within the container as each other*/
+
+/* Style the sun gif small and in the middle */
+.sun-image img {
+  width: 30%;
+  height: auto;
+  margin: 0 auto; 
+  display: block;
+}
+
+/* Style the interest picture */
+.index-bottom-photo img {
+  width: 400px;
+  height: 400px;
+}
+
+.index-middle-section {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	justify-content: center;
-}
-
-/*Set the right section occupy 25%*/
-.index-right-section {
-    flex: 1; /* Take up an equal amount of space within the container as each other*/
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
 	align-items: center;
 }
 
-
-
-/* Style the interest picture */
-.index-right-photo img {
-  width: 300px;
-  height: 300px;
-}
-
-/* Style the picture in the left section of the index page*/
+/* Style the picture of index */
 .center-img {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 200px;
     height: 100%;
     margin: 0 auto;
@@ -104,7 +106,21 @@ a:hover {
     max-height: 100%;
 }
 
-/* Style the body of the index page*/
+/* Style the right section */
+.index-right-section {
+    float: right;
+    display: flex; 
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center; 
+}
+
+.index-right-section p {
+    margin-bottom: 20px;
+}
+
+
+
 body {
     min-height: 100%;
     padding: 0;
@@ -116,9 +132,8 @@ body {
 
 }
 
-/* Set the left margin of the college names*/
-.college-name {
-  margin-left: 40px; 
+.left-align {
+    text-align: left;
 }
 
 .right-align {
@@ -126,7 +141,7 @@ body {
 }
 
 .body-list {
-	list-style-type: circle; /*Display a small circle as the marker before each list item.*/
+	list-style-type: circle;
 }
 
 h1 {
@@ -160,11 +175,11 @@ p {
     text-decoration: none;
 }
 
-/* Set the style of the resume page */
 .resume-body {
-    margin: 0 15%; /* Set the margin*/
+    margin: 0 500px;
     display: flex;
     flex-direction: column;
+    align-items: left;
     justify-content: left;
     position: relative;
 }
@@ -178,13 +193,11 @@ p {
 }
 
 .photo-container {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 42%;
     width: 100px; 
     height: 100px; 
 }
-
-/* Style the picture of the resume page in the middle  */  
+  
 .circle-photo {
     width: 100%; 
     height: 100%; 
@@ -225,159 +238,71 @@ p {
     background-color: #5fbdd0;
 }
 
-/* Style the image of the Lab to the middle*/
-.lab-image {
-		text-align: center;
-	}
-
-.lab-image img {
-		max-width: 50%;
-	}
-
-
-/* Style the date to the right*/
 .with-date {
     display: flex;
-    justify-content: space-between; /* Evenly distributes the child elements along the main axis*/
+    justify-content: space-between;
     margin-bottom: 10px;
 }
 
-/* Style the logos*/
-.Googlelogo {
-  width: 60px;
-  height: 20px;
-}
-
-.HRBlogo {
-  width: 110px;
-  height: 20px;
-}
-
-.CAlogo {
-  width: 30px;
-  height: 20px;
-}
-
-.Shilogo {
-  width: 20px;
-  height: 20px;
-}
-
-.Alilogo {
-  width: 150px;
-  height: 30px;
-}
-
-/* Style the courses container*/
-.course-container {
+.courses-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
 }
 
 .course-form {
-	background-color: #f0f0f5;
+	background-color: #f7f7ea;
+	width:  1200;
+	height: 100px;
 	border-radius: 5px;
 	display: flex;
-	justify-content: center; /* Distribute the child elements in the center */
-    align-items: center; /* Center the content vertically */
-    padding: 0 30px; /* Add horizontal spacing between the child elements */
-	height: 50px;
-}
-
-.course-form input,
-.course-form select,
-.course-form button {
-    margin-right: 20px; /* Add horizontal spacing between the form elements */
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
 }
 
 .course-form > div {
 	display: flex;
 	align-items: center;
-	flex: 1; /* Take up an equal amount of space within the container*/
+	gap: 5px;
 }
 
-.input-field {
-	font-size: 20px;
-	width: 250px;
-	padding: 4px 10px;
-    margin-left: 10px; 
+.search-bar {
+	font-size: 15px;
+	padding: 10px;
+	width: 300px;
 }
 
-.input-field::placeholder {
+.search-bar::placeholder {
   font-size: 15px;
 }
 
-.course-filter {
-  font-size: 15px;
+.course-select {
+  font-size: 18px;
   padding: 6px 10px;
-  margin-left: 10px; 
 }
 
 .course-button {
-    background-color: #ffffcc;
-    font-size: 15px;
-    padding: 6px 10px; /* Set the padding of the button (top/bottom: 4px, left/right: 8px) */
-    border: none; /* Remove the border */
-    outline: none; /* Remove the outline when the button is focused */
-    cursor: pointer; /* Set the cursor style to pointer */
+  font-size: 18px;
+  padding: 8px 12px;
 }
 
-.course-button:hover {
-    background-color: #a3d7e8; /* Set the background color when hovering */
-}
-
-.course-button:active {
-    background-color: #7fcbd9; /* Set the background color when the button is active (pressed) */
-}
-/* Style the course list */
 .course-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align the course blocks */
-	margin: 20px; /* set the gap */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
 }
 
-/* Style the course block */
-.course-block {
-    flex-basis: calc(25% - 20px); /* Set the width of each course block to one-fourth minus the gap */
-    margin-bottom: 20px;
-    box-sizing: border-box; /* Include the padding and border within the width */
-    border: 1px solid #e0ebf5;
-    padding: 10px;
-    display: flex;
+.course-card {
+	border: 1px solid #e0ebf5;
+	padding: 10px;
+	text-align: center;
 }
 
-/* Style the course image */
-.course-image {
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
-}
-
-/* Style the course details */
-.course-details {
-    flex: 1;
-}
-
-.course-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.course-details h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.course-details p {
-    margin-bottom: 5px;
-}
-
-.small-description {
-    font-size: 13px;
-    margin-top: 10px;
+.course-card img {
+	width: 200px;
+	height: 250px;
 }
 
 /*style for footer---begin*/

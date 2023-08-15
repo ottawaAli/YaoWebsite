@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yao Huang">
-    <link rel="shortcut icon" href="Images/R.gif">
-	<title>Yao's Resume</title>
+    <title>Yao's Courses</title>
     <link rel="stylesheet" type="text/css" href="Styles/main.css">
 </head>
 <body>
@@ -21,56 +20,54 @@
     </header>
 
     <!--body-->
-<main>
-    <div class="course-container">
-        <!-- calls the "selectCourse" function when the form is submitted-->		
-        <form class="course-form" onsubmit="selectCourse(event);">
-
-			<!-- Course name search -->
-            <label for="input-field">Course name: </label>
-			<input class="input-field" type="text" placeholder="Type and press Enter or Search" id="search-course" name="search-course">
-            <button class="course-button" type="submit">Search</button>
-	
-            <!-- Dropdown select for filtering by level -->
-            <label for="filter-level">Level: </label>
-            <select class="course-filter" id="filter-level" name="filter-level" onchange="selectCourse(event)">
-			<option value="All">All</option>
-			<option value="1">Level 1</option>
-			<option value="2">Level 2</option>
-			<option value="3">Level 3</option>
-            </select>
-          
-            <!-- Dropdown select for sorting by Level -->
-            <label for="sort-level">Sort by Level: </label>
-            <select class="course-filter" id="sort-level" name="sort-level" onchange="selectCourse(event)">
-                <option>Lowest to Highest</option>
-                <option>Highest to Lowest</option>
-            </select>
-        </form>
-         
-        <!-- Course list -->
-        <div class="course-list" id="course-list"></div>
-		<!-- Course blocks will be dynamically generated here -->
-
-    </div>
-</main>
-
+    <main>
+        <div class="courses-container">
+            <form class="course-form" onsubmit="event.preventDefault(); filterCourses(event);">
+				<div>
+					<input class="search-bar" type="text" placeholder="Input course name" id="query" name="query">
+				</div>
+				
+				<div>
+					<label for="filter-level">Filter by Level: </label>
+					<select class="course-select" id="filter-level" name="filter-level" onchange="filterCourses(event)">
+					  <option>All</option>
+					  <option>Level 1</option>
+					  <option>Level 2</option>
+					  <option>Level 3</option>
+					</select>
+				</div>
+			  
+				<div>
+					  <label for="sort-level">Sort by Level: </label>
+					  <select class="course-select" id="sort-level" name="sort-level" onchange="filterCourses(event)">
+						<option>Lowest to Highest</option>
+						<option>Highest to Lowest</option>
+					  </select>
+				</div>
+				
+				<button class="course-button" type="submit">Search</button>
+			</form>
+             
+			<div class="course-list" id="course-list">
+			</div>
+		</div>
+    </main>
 
     <!--footer-->
     <footer>
     <p>
-        <img src="Images/contact.jpg" alt="contact" class="footer-contact">
+        <img src="Images/contact.jpg" alt="contact" class="footer-contact"/>
         <a href="mailto:huangyao0818@gmail.com" class="footer-a">
-            <img src="Images/Email.jpg" alt="Email" class="footer-img">
+            <img src="Images/Email.jpg" alt="Email" class="footer-img"/>
         </a>
         <a href="https://www.linkedin.com/in/alicia-yao-huang/" target="_blank" class="footer-a">
-            <img src="Images/linkedin.jpg" alt="LinkedIn" class="footer-img">
+            <img src="Images/Linkedin.jpg" alt="LinkedIn" class="footer-img"/>
         </a>
         <a href="https://github.com/ottawaAli" target="_blank" class="footer-a">
-            <img src="Images/Github.png" alt="Github" class="footer-img">
+            <img src="Images/Github.png" alt="Github" class="footer-img"/>
         </a>
     </p>
     </footer>
-	<script src="Scripts/course.js"></script>
+	<script src="Scripts/course.js" type="text/javascript"></script>
 </body>
 </html>
